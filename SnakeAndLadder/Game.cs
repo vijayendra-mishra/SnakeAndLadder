@@ -56,8 +56,11 @@ namespace SnakeAndLadder
                         if (isPlayAgain1)
                         {
                             RollDice(players[i], out bool isPlayAgain2, ref gameOn);
-                            players[i].Position = playerPos;
-                            if (isPlayAgain2) Console.WriteLine($"3 consequent sixes, player turn burnt and position changes back to : {playerPos}");
+                            if (isPlayAgain2)
+                            {
+                                Console.WriteLine($"3 consequent sixes, player turn burnt and position changes back to : {playerPos}");
+                                players[i].Position = playerPos;
+                            }
                         }
 
                     }
