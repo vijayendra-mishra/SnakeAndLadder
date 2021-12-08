@@ -27,7 +27,7 @@ namespace SnakeAndLadder
             bool gameOn = true;
             Console.WriteLine($"{Environment.NewLine}Enter no of players between 1-4:");
 
-            if (!int.TryParse(Console.ReadLine(), out int noOfPlayers))
+            if ((!int.TryParse(Console.ReadLine(), out int noOfPlayers)) || noOfPlayers < 1 || noOfPlayers > 4)
             {
                 Console.WriteLine("Entered value incorrect, going with default of 4!");
                 noOfPlayers = 4;
