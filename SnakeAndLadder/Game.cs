@@ -15,7 +15,7 @@ namespace SnakeAndLadder
             var snakes = new List<int> { 7, 21, 33, 45, 59, 68, 72, 97 };
             var ladders = new List<int> { 9, 26, 37, 49, 52, 60, 74, 88 };
 
-            PopulateBoard(board, snakes, ladders);
+            PopulateBoard(snakes, ladders);
             DisplayBoard();
             PlayGame();
 
@@ -123,7 +123,7 @@ namespace SnakeAndLadder
             }
         }
 
-        private static void PopulateBoard(List<BoardPosition> board, List<int> snakes, List<int> ladders)
+        private static void PopulateBoard(List<int> snakes, List<int> ladders)
         {
             for (int i = 1; i <= 100; ++i)
             {
